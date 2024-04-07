@@ -8,8 +8,8 @@ SECRET_KEY = os.urandom(32)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Enable debug mode, that will refresh the page when you make changes.
-DEBUG = os.environ.get("DEBUG_MODE")
-API_URI = os.environ.get("DEV_URI") if DEBUG else os.environ.get("PROD_URI")
+# DEBUG = os.environ.get("DEBUG_MODE")
+# API_URI = os.environ.get("DEV_URI") if DEBUG else os.environ.get("PROD_URI")
 
 # Connect to the MYSQL database
 # SQLALCHEMY_DATABASE_URI = 'mysql://root:<your_password>@localhost/<your_database_name>'
