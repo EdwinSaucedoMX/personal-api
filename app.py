@@ -31,10 +31,11 @@ app.register_blueprint(v1_0) # Registering version 1.0 of the API
 # migrate = Migrate(app, db)  # Initializing the migration
 
 DEBUG = str_to_bool(os.environ.get("DEBUG_MODE"))
+print(DEBUG)
 PORT = int(os.environ.get("PORT"))
 API_URI = os.environ.get("DEV_URI") if (DEBUG) else os.environ.get("PROD_URI")
 
 
 
 if __name__ == '__main__':  # Running the app
-    app.run(host=API_URI , port=PORT, debug=DEBUG, use_reloader=True)
+    app.run(host=API_URI , port=PORT, debug=DEBUG)
