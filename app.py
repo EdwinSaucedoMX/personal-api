@@ -30,10 +30,10 @@ app.register_blueprint(user, url_prefix='/user')
 # migrate = Migrate(app, db)  # Initializing the migration
 
 DEBUG = str_to_bool(os.environ.get("DEBUG_MODE"))
+PORT = int(os.environ.get("PORT"))
 API_URI = os.environ.get("DEV_URI") if (DEBUG) else os.environ.get("PROD_URI")
-print(DEBUG)
-print(API_URI)
+
 
 
 if __name__ == '__main__':  # Running the app
-    app.run(host=API_URI, port=3000, debug=DEBUG, use_reloader=True)
+    app.run(host=API_URI, port=PORT, debug=DEBUG, use_reloader=True)
