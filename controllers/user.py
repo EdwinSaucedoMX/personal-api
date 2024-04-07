@@ -1,5 +1,12 @@
+from flask import request
+from helpers.assertions import check_fields
+
 def create():
-    return 'User created by me twice XD'
+    req = request.get_json()
+    if(check_fields(req, required_fields=['name', 'email', 'password'])):
+        return check_fields(req, required_fields=['name', 'email', 'password'])
+    
+    return 'User created'
 
 def update():
     return 'User updated'

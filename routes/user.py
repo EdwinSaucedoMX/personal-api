@@ -3,4 +3,4 @@ from controllers.user import create, update, delete
 
 user = Blueprint('user', __name__)
 
-user.get("/")(create)
+user.post("/")(create)
