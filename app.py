@@ -27,6 +27,7 @@ app.register_blueprint(user, url_prefix='/user')
 
 DEBUG = os.environ.get("DEBUG_MODE")
 API_URI = os.environ.get("DEV_URI") if DEBUG else os.environ.get("PROD_URI")
+print(DEBUG)
 print(API_URI)
 
 
